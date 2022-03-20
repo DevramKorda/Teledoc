@@ -1,0 +1,38 @@
+﻿@model Teledoc.Models.Client
+
+@{
+    ViewData["Title"] = "Client Edit";
+}
+
+<form asp-action="Edit">
+    <div class="col-md-4">
+        <div>
+            <label asp-for="Inn" class="control-label"></label>
+            <input asp-for="Inn" class="form-control"/>
+            <span asp-validation-for="Inn"></span>
+        </div>
+
+        <div>            
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control"/>
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div >
+            <label asp-for="Type" class="control-label"></label>
+            <input asp-for="Type" class="form-control"/>
+            <span asp-validation-for="Type"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>    
+
+
+@*для валидации*@
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

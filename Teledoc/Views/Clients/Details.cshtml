@@ -1,0 +1,35 @@
+﻿@model Teledoc.Models.Client
+
+@{
+    ViewData["Title"] = "Client Details";
+}
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.Id)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Id)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.Inn)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Inn)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.Type)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Type)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.AddDate)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.AddDate)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.UpdateDate)</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.UpdateDate)</dd>
+
+        <dt class = "col-sm-2">@Html.DisplayNameFor(model => model.Founders.First().Fio)</dt>
+        
+ @foreach(var item in Model.Founders)
+{       
+        <dd class = "col-sm-10">@Html.DisplayFor(modelItem => item.Fio)</dd>
+        <dt class = "col-sm-2"> </dt>
+}
+    </dl>
+</div>
